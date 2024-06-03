@@ -7,7 +7,7 @@ using KnightPath.Models;
 using Azure.Storage.Queues.Models;
 using System.Text.Json;
 
-namespace KnightPath
+namespace KnightPath.Functions
 {
     public class KnightPathFunctions
     {
