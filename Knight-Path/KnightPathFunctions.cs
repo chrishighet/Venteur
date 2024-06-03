@@ -14,7 +14,7 @@ namespace KnightPath
         private readonly ILogger _logger;
         private readonly IKnightService _knightService;
         private const string queueName = "knightpath";
-        private const string knightPathRoute = "knightpath"; 
+        private const string knightPathRoute = "knightpath";
 
         public KnightPathFunctions(ILoggerFactory loggerFactory, IKnightService knightService)
         {

@@ -12,7 +12,7 @@ namespace KnightPath.Services
         private readonly int[] _xMovement = [2, 1, -1, -2, -2, -1, 1, 2];
         private readonly int[] _yMovement = [1, 2, 2, 1, -1, -2, -2, -1];
 
-        // local store of shortest knight path moves, real-world this would be stored somewhere, and could even be pre-computed
+        // in-memory storage of shortest knight path moves, real-world this could be stored in a Db, or could even be pre-computed
         private readonly ConcurrentDictionary<Move, Models.KnightPath> _knightPaths = new();
 
         private readonly ConcurrentDictionary<Guid, Models.KnightPath> _operationsStore = new();
@@ -186,7 +186,7 @@ namespace KnightPath.Services
             if (position.Length != 2)
             {
                 throw new ArgumentException("The position is not valid, it must be a letter followed by a number", nameof(position));
-            }          
+            }
 
             int horizontal = position[0] switch
             {
