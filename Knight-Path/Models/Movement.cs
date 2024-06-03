@@ -32,6 +32,5 @@ namespace KnightPath.Models
         /// How many jumps this move took
         /// </summary>
         public int Jumps { get; set; }
-
     }
 }
